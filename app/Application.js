@@ -24,4 +24,8 @@ Ext.define('HeiwaExtjs.Application', {
             }
         );
     }
-});
+} 
+//     function () {
+//         console.log("On the callback");
+//     }
+);
