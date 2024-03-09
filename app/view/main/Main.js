@@ -82,11 +82,13 @@ Ext.define('HeiwaExtjs.view.main.Main', {
             xtype: 'mainlist'
         }]
     }, {
-        title: 'Users',
+        title: 'Posts',
         iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [
+            {
+                xtype: 'postgrid'
+            }
+        ]
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
