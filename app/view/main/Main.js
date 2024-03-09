@@ -75,13 +75,6 @@ Ext.define('HeiwaExtjs.view.main.Main', {
     },
 
     items: [{
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }, {
         title: 'Posts',
         iconCls: 'fa-user',
         items: [
@@ -92,14 +85,14 @@ Ext.define('HeiwaExtjs.view.main.Main', {
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [
+
+        ]
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [
+
+        ]
     }]
 });
