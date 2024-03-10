@@ -17,6 +17,19 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         listeners: {
             click: 'onFormFieldClicked'
         }
+
+    },
+    {
+        text: 'Accordion',
+        listeners: {
+            click: 'onAccordionClicked'
+        }
+    },
+    {
+        text: 'HBox',
+        listeners: {
+            click: 'onHboxClicked'
+        }
     }],
 
     columns: [

@@ -17,6 +17,7 @@ Ext.define('HeiwaExtjs.view.posts.PostFormPopup', {
             jsonSubmit: true,
             bodyPadding: 10,
             modelValidation: true,
+            layout: 'form',
             items: [
                 {
                     allowBlank: true,

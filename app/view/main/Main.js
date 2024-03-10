@@ -16,6 +16,7 @@ Ext.define('HeiwaExtjs.view.main.Main', {
         'HeiwaExtjs.view.main.MainController',
         'HeiwaExtjs.view.main.MainModel',
         'HeiwaExtjs.view.main.List'
+        
     ],
 
     controller: 'main',
