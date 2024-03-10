@@ -30,7 +30,14 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         listeners: {
             click: 'onHboxClicked'
         }
-    }],
+    },
+    {
+        text: 'Check Out',
+        listeners: {
+            click: 'onCheckoutClicked'
+        }
+    }
+    ],
 
     columns: [
         { dataIndex: 'id', text: 'ID' },
