@@ -4,10 +4,16 @@ Ext.define('HeiwaExtjs.view.posts.PostGridViewController',{
 
     onAddPostClicked:function(btn,e,eOpts){
         console.log(btn.getText() + " was clicked");
-        // Ext.create("HeiwaExtjs.view.demo.CustomWindow");
+        
         var wd = Ext.create({
             xtype: "postformwindow",
         });
         wd.show();
+    },
+    onFormFieldClicked:function(btn,e,eOpts){
+        console.log(btn.getText() + " was clicked");
+        Ext.create({
+            xtype: "formfielddemo",
+        });
     }
 })

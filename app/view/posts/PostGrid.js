@@ -6,10 +6,16 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         type: 'posts'
     },
 
-    tbar:[{
+    tbar: [{
         text: 'Add Post',
-        listeners:{
+        listeners: {
             click: 'onAddPostClicked'
+        }
+    },
+    {
+        text: 'Form Fields',
+        listeners: {
+            click: 'onFormFieldClicked'
         }
     }],
 
