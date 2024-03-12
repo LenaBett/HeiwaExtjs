@@ -16,7 +16,7 @@ Ext.define('HeiwaExtjs.view.main.Main', {
         'HeiwaExtjs.view.main.MainController',
         'HeiwaExtjs.view.main.MainModel',
         'HeiwaExtjs.view.main.List'
-        
+
     ],
 
     controller: 'main',
@@ -86,24 +86,24 @@ Ext.define('HeiwaExtjs.view.main.Main', {
             ]
         },
         {
-        title: 'Posts',
-        iconCls: 'fa-user',
-        items: [
-            // {
-            //     xtype: 'postgrid'
-            // }
-        ]
-    }, {
-        title: 'Home',
-        iconCls: 'fa-home',
-        items: [
+            title: 'Employees',
+            iconCls: 'fa-user',
+            items: [
+                {
+                    xtype: 'employeegrid'
+                }
+            ]
+        }, {
+            title: 'Home',
+            iconCls: 'fa-home',
+            items: [
 
-        ]
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        items: [
+            ]
+        }, {
+            title: 'Settings',
+            iconCls: 'fa-cog',
+            items: [
 
-        ]
-    }]
+            ]
+        }]
 });
