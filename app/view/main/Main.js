@@ -1,12 +1,12 @@
 /**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting automatically applies the "viewport"
- * plugin causing this view to become the body element (i.e., the viewport).
- *
- * TODO - Replace this content of this view to suite the needs of your application.
- */
+* This class is the main view for the application. It is specified in app.js as the
+* "mainView" property. That setting automatically applies the "viewport"
+* plugin causing this view to become the body element (i.e., the viewport).
+*
+* TODO - Replace this content of this view to suite the needs of your application.
+*/
 Ext.define('HeiwaExtjs.view.main.Main', {
-    extend: 'Ext.tab.Panel',
+    extend: 'Ext.container.Container',
     xtype: 'app-main',
 
     requires: [
@@ -15,101 +15,47 @@ Ext.define('HeiwaExtjs.view.main.Main', {
 
         'HeiwaExtjs.view.main.MainController',
         'HeiwaExtjs.view.main.MainModel',
-        'HeiwaExtjs.view.main.List'
 
     ],
-
+    plugins: 'viewport',
     controller: 'main',
     viewModel: 'main',
 
-    ui: 'navigation',
-
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
-
-    header: {
-        layout: {
-            align: 'stretchmax'
-        },
-        title: {
-            bind: {
-                text: '{name}'
-            },
-            flex: 0
-        },
-        iconCls: 'fa-th-list'
+    layout: {
+        type: 'border'
     },
 
-    tabBar: {
-        flex: 1,
-        layout: {
-            align: 'stretch',
-            overflowHandler: 'none'
+    items: [{
+        xtype: 'mainmenu',
+        bind: {
+            title: '{name}'
         },
-        items: [
-            {
-                text: 'Logout',
-                handler: 'onLogout'
-            }
-        ]
+        region: 'west',
+        width: 250,
+        split: true,
     },
-
-    responsiveConfig: {
-        tall: {
-            headerPosition: 'top'
-        },
-        wide: {
-            headerPosition: 'left'
-        }
-    },
-
-    defaults: {
-        bodyPadding: 20,
-        tabConfig: {
-            responsiveConfig: {
-                wide: {
-                    iconAlign: 'left',
-                    textAlign: 'left'
-                },
-                tall: {
-                    iconAlign: 'top',
-                    textAlign: 'center',
-                    width: 120
-                }
-            }
-        }
-    },
-
-    items: [
-        {
-            title: 'Data Panel',
-            iconCls: 'fa-database',
-            items: [
-                {
-                    xtype: 'parentpanel'
-                }
-            ]
+    {
+        region: 'center',
+        xtype: 'tabpanel',
+        items: [{
+            title: 'Foo'
         },
         {
-            title: 'Data Groups',
-            iconCls: 'fa-layer-group',
-            items: [
-                {
-                    xtype: 'summarypanel'
-                }
-            ]
-        }, {
-            title: 'Home',
-            iconCls: 'fa-home',
-            items: [
-
-            ]
-        }, {
-            title: 'Settings',
-            iconCls: 'fa-cog',
-            items: [
-
-            ]
+            title: 'Bar',
+            closable: true,
+            tabConfig: {
+                title: 'Custom Title',
+                tooltip: 'A button tooltip'
+            }
         }]
+
+    },
+    {
+        region: 'south',
+        xtype: 'appfooter',
+    },
+    {
+        region: 'north',
+        xtype: 'appheader',
+    }]
 });

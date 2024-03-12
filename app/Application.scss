@@ -3,3 +3,13 @@
  *  styling should be located the view's corresponding scss file.
  */
 $enable-font-awesome: dynamic(true);
+$heiwaextjs-button-icon-color: #fff;
+$heiwaextjs-tab-icon-color: rgb(11, 103, 196);
+
+.tabIcon {
+    color: $heiwaextjs-tab-icon-color;
+}
+
+.buttonIcon {
+    color: $heiwaextjs-button-icon-color;
+}
