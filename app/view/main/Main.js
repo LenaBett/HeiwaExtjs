@@ -36,7 +36,7 @@ Ext.define('HeiwaExtjs.view.main.Main', {
     },
     {
         region: 'center',
-        xtype: 'tabpanel',
+        xtype: 'mainpanel',
         
     },
     {

@@ -29,13 +29,19 @@ Ext.define('HeiwaExtjs.store.Menu',{
                 iconCls:'fa fa-database fa-lg',
                 children: [
                     {
+                        text: 'User Details',
+                        iconCls: 'fa-database',
+                        className: 'parentpanel',
+                        leaf: true
+                    },
+                    {
                         text: 'Posts',
                         iconCls: 'fa fa-users',
                         classname:'postgrid',
                         leaf: true
                     },
                     {
-                        text: 'Permission',
+                        text: 'Personnel',
                         iconCls: 'fa fa-users',
                         classname:'mainlist',
                         leaf: true
