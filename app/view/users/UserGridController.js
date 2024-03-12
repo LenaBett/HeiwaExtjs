@@ -20,17 +20,22 @@ Ext.define('HeiwaExtjs.view.users.UserGridController', {
             }
         })
     },
-    onShowDetails:function(btn,e,eOpts){
+    onShowDetails: function (btn, e, eOpts) {
         let userGrid = this.getView();
         let lowerPanel = Ext.ComponentQuery.query('datapanel')[0];
-        if(userGrid.getHeight() === 1200){
+        if (userGrid.getHeight() === 1200) {
             userGrid.setHeight(600)
             lowerPanel.setHeight(600)
             btn.setText("Hide Details")
-        }else{
+        } else {
             userGrid.setHeight(1200)
             lowerPanel.setHeight(0)
             btn.setText("Show Details")
         }
+    },
+    onModelBinding: function (btn, e, eOpts) {
+        Ext.create({
+            xtype: 'bindingform'
+        })
     }
 })
