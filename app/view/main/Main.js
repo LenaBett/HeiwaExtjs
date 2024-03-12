@@ -86,11 +86,11 @@ Ext.define('HeiwaExtjs.view.main.Main', {
             ]
         },
         {
-            title: 'Employees',
-            iconCls: 'fa-user',
+            title: 'Data Groups',
+            iconCls: 'fa-layer-group',
             items: [
                 {
-                    xtype: 'employeegrid'
+                    xtype: 'summarypanel'
                 }
             ]
         }, {
