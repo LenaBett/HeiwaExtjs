@@ -37,5 +37,10 @@ Ext.define('HeiwaExtjs.view.users.UserGridController', {
         Ext.create({
             xtype: 'bindingform'
         })
+    },
+    onUserGridCellDblClick: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+        console.log(record.get('username'));
+    },
+    onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
     }
 })
