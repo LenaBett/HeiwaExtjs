@@ -40,7 +40,7 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
     ],
 
     columns: [
-        { dataIndex: 'id', text: 'ID' },
+        { dataIndex: '_id', text: 'ID' },
         { dataIndex: 'title', text: 'Title', flex: 1 },
         { dataIndex: 'body', text: 'Body', flex: 2 },
         { dataIndex: 'userId', text: 'User ID' }
@@ -49,11 +49,11 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         selType: 'checkboxmodel',
         mode: 'SINGLE'
     },
-    // bbar: {
-    //     xtype: 'pagingtoolbar',
-    //     displayInfo: true
-    // },
-    // scrollable:true,
-    // height: 800
+    bbar: {
+        xtype: 'pagingtoolbar',
+        displayInfo: true
+    },
+    scrollable:true,
+    height: 900
 
 })

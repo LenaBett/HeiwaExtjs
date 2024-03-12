@@ -5,6 +5,7 @@ modern.json*
 .sencha
 /ext
 sencha-error*
+.env
 
 
 # Eclipse

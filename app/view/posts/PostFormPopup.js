@@ -21,11 +21,11 @@ Ext.define('HeiwaExtjs.view.posts.PostFormPopup', {
             items: [
                 {
                     allowBlank: true,
-                    readOnly: false,
+                    readOnly: true,
                     xtype: 'textfield',
                     reference: 'postId',
                     fieldLabel: 'Post ID',
-                    name: 'id',
+                    name: '_id',
                     emptyText: 'Post id'
                 },
                 {

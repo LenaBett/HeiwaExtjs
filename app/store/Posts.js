@@ -5,6 +5,7 @@ Ext.define('HeiwaExtjs.store.Posts', {
     requires: ['HeiwaExtjs.model.Post'],
     autoLoad: true,
     sorters: ['id'],
+    pageSize: 25 
     // filters: {
     //     property: 'userId',
     //     value: '5'
