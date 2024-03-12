@@ -23,9 +23,14 @@ Ext.define('HeiwaExtjs.Application', {
                 }
             }
         );
+    },
+    launch:function(profile){
+        var loggedIn;
+        loggedIn = localStorage.getItem("MyAppLoggedIn");
+        console.log(loggedIn);
+        Ext.create({
+            xtype: loggedIn ? 'app-main' : 'login'
+          })
     }
 } 
-//     function () {
-//         console.log("On the callback");
-//     }
 );

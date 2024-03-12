@@ -46,7 +46,13 @@ Ext.define('HeiwaExtjs.view.main.Main', {
         layout: {
             align: 'stretch',
             overflowHandler: 'none'
-        }
+        },
+        items: [
+            {
+                text: 'Logout',
+                handler: 'onLogout'
+            }
+        ]
     },
 
     responsiveConfig: {

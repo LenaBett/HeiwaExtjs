@@ -15,5 +15,15 @@ Ext.define('HeiwaExtjs.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+    onLogout: function(){
+        // remove localstorageley/value
+        localStorage.removeItem('MyAppLoggedIn');
+
+        // remove main menu
+        this.getView().destroy();
+
+        // add the login window
+        Ext.widget('login');
     }
 });
