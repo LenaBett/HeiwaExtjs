@@ -1,12 +1,12 @@
-Ext.define('HeiwaExtjs.view.users.UserGrid',{
-    extend:'Ext.grid.GridPanel',
-    xtype:'usergrid',
-    controller:'usergridcontroller',
-    title:'Users',
-    store:{
-        type:'users'
+Ext.define('HeiwaExtjs.view.users.UserGrid', {
+    extend: 'Ext.grid.GridPanel',
+    xtype: 'usergrid',
+    controller: 'usergridcontroller',
+    title: 'Users',
+    store: {
+        type: 'users'
     },
-    height:1200,
+    height: 800,
     plugins: {
         cellediting: {
             clicksToEdit: 1
@@ -16,21 +16,21 @@ Ext.define('HeiwaExtjs.view.users.UserGrid',{
         selType: 'cellmodel',
     },
 
-    columns:[
+    columns: [
         {
-            dataIndex:'_id',
+            dataIndex: '_id',
             text: 'ID'
         },
         {
             dataIndex: 'username',
             text: 'Username',
-            flex:2,
-            editor:'textfield'
+            flex: 2,
+            editor: 'textfield'
         },
         {
             dataIndex: 'email',
             text: 'Email',
-            flex:3,
+            flex: 3,
             renderer: function (value) {
                 return Ext.String.format('<a href="mailto:{0}">{1}</a>', value, value);
             },
@@ -43,10 +43,10 @@ Ext.define('HeiwaExtjs.view.users.UserGrid',{
         {
             dataIndex: 'city',
             text: 'City',
-            flex:2
+            flex: 2
         }
     ],
-    tbar:[
+    tbar: [
         {
             text: 'Add User'
         },
@@ -60,7 +60,7 @@ Ext.define('HeiwaExtjs.view.users.UserGrid',{
             handler: 'onShowDetails',
             bind: {
                 disabled: '{!usergrid.selection}'
-            } 
+            }
         }
     ],
     selModel: {
@@ -71,10 +71,10 @@ Ext.define('HeiwaExtjs.view.users.UserGrid',{
         xtype: 'pagingtoolbar',
         displayInfo: true
     },
-    listeners:{
-        cellclick:'onUserGridCellClick',
-        celldblclick:'onUserGridCellDblClick',
-        cellcontextmenu:'onUserGridCellContextMenu'
+    listeners: {
+        cellclick: 'onUserGridCellClick',
+        celldblclick: 'onUserGridCellDblClick',
+        cellcontextmenu: 'onUserGridCellContextMenu'
     }
 
 })

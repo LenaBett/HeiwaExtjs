@@ -12,11 +12,13 @@ Ext.define('HeiwaExtjs.store.Menu',{
                     {
                         text:'Users',
                         iconCls:'fa fa-users',
+                        classname:'usergrid',
                         leaf:true
                     },
                     {
-                        text: 'Permission',
+                        text: 'Todos',
                         iconCls: 'fas fa-user-secret',
+                        classname:'todogrid',
                         leaf: true
                     }
                 ]
@@ -27,13 +29,15 @@ Ext.define('HeiwaExtjs.store.Menu',{
                 iconCls:'fa fa-database fa-lg',
                 children: [
                     {
-                        text: 'Users',
+                        text: 'Posts',
                         iconCls: 'fa fa-users',
+                        classname:'postgrid',
                         leaf: true
                     },
                     {
                         text: 'Permission',
                         iconCls: 'fa fa-users',
+                        classname:'mainlist',
                         leaf: true
                     }
                 ]

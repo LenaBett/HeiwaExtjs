@@ -28,9 +28,6 @@ Ext.define('HeiwaExtjs.Application', {
         var loggedIn;
         loggedIn = localStorage.getItem("MyAppLoggedIn");
         console.log(loggedIn);
-        Ext.create({
-            xtype: loggedIn ? 'app-main' : 'login'
-          })
-    }
+        Ext.widget(loggedIn?'app-main' :'login');
 } 
-);
+});
