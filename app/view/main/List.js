@@ -9,8 +9,6 @@ Ext.define('HeiwaExtjs.view.main.List', {
         'HeiwaExtjs.store.Personnel'
     ],
 
-    title: 'Personnel',
-
     store: {
         type: 'personnel'
     },

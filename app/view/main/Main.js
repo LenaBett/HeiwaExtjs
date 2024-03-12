@@ -75,17 +75,27 @@ Ext.define('HeiwaExtjs.view.main.Main', {
         }
     },
 
-    items: [{
+    items: [
+        {
+            title: 'Data Panel',
+            iconCls: 'fa-database',
+            items: [
+                {
+                    xtype: 'parentpanel'
+                }
+            ]
+        },
+        {
         title: 'Posts',
         iconCls: 'fa-user',
         items: [
-            {
-                xtype: 'postgrid'
-            }
+            // {
+            //     xtype: 'postgrid'
+            // }
         ]
     }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
+        title: 'Home',
+        iconCls: 'fa-home',
         items: [
 
         ]

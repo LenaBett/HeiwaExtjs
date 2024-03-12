@@ -40,7 +40,7 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
     ],
 
     columns: [
-        { dataIndex: '_id', text: 'ID' },
+        { dataIndex: '_id', text: 'ID', hidden: 'false' },
         { dataIndex: 'title', text: 'Title', flex: 1 },
         { dataIndex: 'body', text: 'Body', flex: 2 },
         { dataIndex: 'userId', text: 'User ID' }
@@ -54,6 +54,6 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         displayInfo: true
     },
     scrollable:true,
-    height: 900
+    
 
 })
