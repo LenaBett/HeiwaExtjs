@@ -2,6 +2,7 @@ Ext.define('HeiwaExtjs.store.Personnel', {
     extend: 'Ext.data.Store',
 
     alias: 'store.personnel',
+    autoLoad: true,
 
     model: 'HeiwaExtjs.model.Personnel',
 

@@ -3,7 +3,7 @@ Ext.define('HeiwaExtjs.store.Posts', {
     alias: 'store.posts',
     model: 'HeiwaExtjs.model.Post',
     requires: ['HeiwaExtjs.model.Post'],
-    // autoLoad: true,
+    autoLoad: true,
     sorters: ['id'],
     pageSize: 25 
     // filters: {

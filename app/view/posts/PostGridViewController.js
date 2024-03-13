@@ -1,36 +1,30 @@
-Ext.define('HeiwaExtjs.view.posts.PostGridViewController',{
+Ext.define('HeiwaExtjs.view.posts.PostGridViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.postgridviewcontroller',
     mixins: ['HeiwaExtjs.mixin.GridMixin'],
 
-    onAddPostClicked:function(btn,e,eOpts){
+    onAddPostClicked: function (btn, e, eOpts) {
         console.log(btn.getText() + " was clicked");
-        
+
         var wd = Ext.create({
             xtype: "postformwindow",
         });
         wd.show();
     },
-    onFormFieldClicked:function(btn,e,eOpts){
+    onFormFieldClicked: function (btn, e, eOpts) {
         console.log(btn.getText() + " was clicked");
         Ext.create({
             xtype: "formfielddemo",
         });
     },
-    onAccordionClicked:function(btn,e,eOpts){
-        console.log(btn.getText() + " was clicked");
+
+    onVTypesClicked: function (btn, e, eOpts) {
         Ext.create({
-            xtype: "accordion",
+            xtype: "formfieldvtypevalidation",
         });
     },
-    onHboxClicked:function(btn,e,eOpts){
-        console.log(btn.getText() + " was clicked");
-        Ext.create({
-            xtype: "hbox",
-        });
-    },
-    onCheckoutClicked:function(btn,e,eOpts){
-        console.log(btn.getText() + " was clicked");
+
+    onLayoutsClicked: function (btn, e, eOpts) {
         Ext.create({
             xtype: "checkoutform",
         });
@@ -38,11 +32,12 @@ Ext.define('HeiwaExtjs.view.posts.PostGridViewController',{
     onEditClicked: function (btn, e, eOpts) {
 
     },
+
     onDeleteClicked: function (btn, e, eOpts) {
-        let me=this;
+        let me = this;
         let record = this.getSelectedRecordByXType('postgrid');
         let grid = me.getView()
-        if (record){
+        if (record) {
             let recordId = record.get('_id');
             Ext.Msg.confirm('Delete Operation', `Are you sure you want to delete the post with id ${recordId}`, function (btn, text) {
                 if (btn == 'yes') {
@@ -59,7 +54,7 @@ Ext.define('HeiwaExtjs.view.posts.PostGridViewController',{
                             console.log('server-side failure with status code ' + response.status);
                         }
                     });
-                }else{
+                } else {
                     Ext.Msg.alert('Cancellation', 'Alright. Thank you!!!');
                 }
             });

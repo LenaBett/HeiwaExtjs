@@ -1,7 +1,9 @@
 Ext.define('HeiwaExtjs.view.posts.PostGrid', {
     extend: 'Ext.grid.Panel',
     xtype: 'postgrid',
+    reference:'postgrid',
     controller: 'postgridviewcontroller',
+    
     store: {
         type: 'posts'
     },
@@ -34,24 +36,17 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
 
     },
     {
-        text: 'Accordion',
+        text: 'VTypes',
         listeners: {
-            click: 'onAccordionClicked'
+            click: 'onVTypesClicked'
         }
     },
     {
-        text: 'HBox',
+        text: 'Checkout Form',
         listeners: {
-            click: 'onHboxClicked'
+            click: 'onLayoutsClicked'
         }
-    },
-    {
-        text: 'Check Out',
-        listeners: {
-            click: 'onCheckoutClicked'
-        }
-    }
-    ],
+    }],
 
     columns: [
         { dataIndex: '_id', text: 'ID', hidden: 'false' },

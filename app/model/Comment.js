@@ -14,7 +14,7 @@ Ext.define('HeiwaExtjs.model.Comment',{
     ],
     proxy:{
         type: 'rest',
-        url: 'https://jsonplaceholder.typicode.com/comments',
+        url: 'http://localhost:3000/comments',
         reader: {
             type: 'json',
         }
