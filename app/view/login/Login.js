@@ -6,7 +6,7 @@ Ext.define('HeiwaExtjs.view.login.Login', {
         'Ext.form.Panel'
     ],
 
-    controller: 'login',
+    controller: 'logincontroller',
     bodyPadding: 10,
     title: 'Login Window',
     closable: false,

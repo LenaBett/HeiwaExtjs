@@ -14,5 +14,5 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    mainView: 'HeiwaExtjs.view.main.Main'
+    // mainView: 'HeiwaExtjs.view.main.Main'
 });

@@ -1,4 +1,4 @@
-Ext.define('HeiwaExtjs.view.posts.PostGridViewController', {
+Ext.define('HeiwaExtjs.view.posts.PostViewGridViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.postgridviewcontroller',
     mixins: ['HeiwaExtjs.mixin.GridMixin'],

@@ -1,9 +1,9 @@
 Ext.define('HeiwaExtjs.view.posts.PostGrid', {
     extend: 'Ext.grid.Panel',
     xtype: 'postgrid',
-    reference:'postgrid',
+    reference: 'postgrid',
     controller: 'postgridviewcontroller',
-    
+
     store: {
         type: 'posts'
     },
@@ -33,7 +33,6 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         listeners: {
             click: 'onFormFieldClicked'
         }
-
     },
     {
         text: 'VTypes',
@@ -49,11 +48,29 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
     }],
 
     columns: [
-        { dataIndex: '_id', text: 'ID', hidden: 'false' },
-        { dataIndex: 'title', text: 'Title', flex: 1 },
-        { dataIndex: 'body', text: 'Body', flex: 2 },
-        { dataIndex: 'userId', text: 'User ID' }
+        { 
+            dataIndex: '_id', 
+            text: 'ID', 
+            // hidden: 'false', -hidden defaults to true
+        },
+
+        { 
+            dataIndex: 'title', 
+            text: 'Title', 
+            flex: 1 
+        },
+        { 
+            dataIndex: 'body', 
+            text: 'Body', 
+            flex: 2 
+        },
+        { 
+            dataIndex: 'userId', 
+            text: 'User ID', 
+            flex: 2 
+        },
     ],
+
     selModel: {
         selType: 'checkboxmodel',
         mode: 'SINGLE'
@@ -63,6 +80,6 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         displayInfo: true
     },
     scrollable:true,
-    
+
 
 })

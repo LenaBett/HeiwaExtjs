@@ -36,8 +36,8 @@ Ext.define('HeiwaExtjs.view.main.Main', {
     },
     {
         region: 'center',
-        xtype: 'mainpanel',
-        
+        xtype: 'mainpanel'
+
     },
     {
         region: 'south',
