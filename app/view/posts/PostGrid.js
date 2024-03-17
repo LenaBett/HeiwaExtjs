@@ -8,7 +8,29 @@ Ext.define('HeiwaExtjs.view.posts.PostGrid', {
         type: 'posts'
     },
 
-    tbar: [{
+    tbar: [ {
+        fieldLabel: 'Search',
+        xtype: 'textfield',
+        listeners: {
+            change: 'onSearchKeyValueChange'
+        }
+    },
+    {
+        fieldLabel: 'Choose User',
+        xtype: 'combo',
+
+        store: {
+            type: 'users'
+        },
+        queryMode: 'local',
+        displayField: 'username',
+        valueField: '_id',
+        listeners:{
+            change:'onUserSelectionChange',
+            select:'onUserSelected'
+        }
+    },
+    {
         text: 'Add Post',
         listeners: {
             click: 'onAddPostClicked'
